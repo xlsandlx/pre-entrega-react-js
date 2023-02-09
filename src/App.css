@@ -5,3 +5,22 @@ background-color: #9d92ff;
 h1 {
     text-align: center;
 }
+
+body{
+    background-color: #6b5b75;
+}
+
+.card-color{
+    background-color: #C8C2FF;
+}
+
+.card-body-color{
+    background-color: #9D92FF;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

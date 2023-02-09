@@ -1,25 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState, useEffect } from 'react'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+
 import  Navbar from './components/NavBar/Navbar';
 import './App.css'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemListContainer }  from './components/ItemListContainer/ItemListContainer';
 import { ItemCount } from './components/ItemCount/ItemCount';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartContainer } from './components/CartContainer/CartContainer';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function App(props) {
 
   return (
-   <>
+   <BrowserRouter>
         <Navbar/>
-        <ItemListContainer greeting='greeting'/>
+        <Routes>
+          <Route path='/' element={ <ItemListContainer greeting='greeting'/> } />
+          <Route path='/categoria/:idCategoria' element={ <ItemListContainer greeting='greeting'/> } />
+          <Route path='/detalle/:idProducto' element={ <ItemDetailContainer /> } />
+          <Route path='/cart' element={ <CartContainer /> } />
+
+          <Route path='*' element={ <Navigate to='/'/> } />
+        </Routes>
         <ItemCount />
-        <ItemDetailContainer />
-        <CartContainer />
-   </>
+   </BrowserRouter>
   )
 
 }
