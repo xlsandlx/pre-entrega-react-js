@@ -1,24 +1,24 @@
-.nav-color{
-background-color: #9d92ff;
+.nav-color {
+    background-color: #9d92ff;
 }
 
 h1 {
     text-align: center;
 }
 
-body{
+body {
     background-color: #6b5b75;
 }
 
-.card-color{
+.card-color {
     background-color: #C8C2FF;
 }
 
-.card-body-color{
+.card-body-color {
     background-color: #9D92FF;
 }
 
-.contenedor{
+.contenedor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

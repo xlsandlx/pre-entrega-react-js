@@ -10,15 +10,15 @@ function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" variant="ligth" className='nav-color'>
       <Container className='fs-5 text-dark'>
-          <Navbar.Brand href="#home">
-            <img
-              src={Penguin}
-              width="100"
-              height="100"
-              className="d-inline-block align-top"
-              alt="Penguin store logo"
-            />
-          </Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img
+            src={Penguin}
+            width="100"
+            height="100"
+            className="d-inline-block align-top"
+            alt="Penguin store logo"
+          />
+        </Navbar.Brand>
         <NavLink to='/' className='fs-1 text-decoration-none text-dark fw-semibold' >Penguin Store</NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -26,7 +26,7 @@ function NavBar() {
             <NavLink to='/categoria/remeras' className='text-decoration-none text-dark ms-3' >Remeras</NavLink>
             <NavLink to='/categoria/pantalones' className='text-decoration-none text-dark ms-3' >Pantalones</NavLink>
             <NavLink to='/categoria/zapatillas' className='text-decoration-none text-dark ms-3' >Zapatillas</NavLink>
-            <Link to='/cart' className='text-decoration-none text-dark  ms-2' ><CartWidget/></Link>
+            <Link to='/cart' className='text-decoration-none text-dark  ms-2' ><CartWidget /></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
